@@ -38,6 +38,7 @@ nav ul {
   display: flex;
   align-items: space-between;
 
+
   /* color: white; */
   /* Use flexbox to layout the li elements horizontally */
 }
@@ -46,12 +47,13 @@ nav ul li {
   list-style: none;
   margin-right: 1rem;
   font-size: 20px;
+
 }
 
-a {
+nav ul li a {
   color:  white;
   text-decoration: none;
-}
+} 
 
 nav ul li a:hover{
   text-decoration: underline;
@@ -74,18 +76,21 @@ nav ul li a:hover{
 
 .where-togo {
   background-color: #040E27;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .where-togo h3 {
   color: white;
-  font-size: 26px;
-  margin: 1rem;
+  font-size: 30px;
+  /* margin: 1rem; */
+  display: flex;
+  align-items: left;
 }
 
 .search-form {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .search-btn {
@@ -93,10 +98,10 @@ nav ul li a:hover{
   background-color: #F04A56;
   font-size: 14px;
   color: white;
-  height: 2rem;
+  height: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* width: */
+  width: 8rem;
   border: none;
   border-radius: 3px;
   /* cursor */
@@ -120,10 +125,21 @@ nav ul li a:hover{
 /* Hint: https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling */
 
 input {
+  border: none;
+  border-radius: 3px;
+  height: 3rem;
+  width: 15rem;
+  padding-left: 1rem;
   /* Style the form input elements using width, height, padding-left and border-radius */
 }
 
 .nice-select {
+  border: none;
+  border-radius: 3px;
+  height: 3rem;
+  width: 15rem;
+  color: grey;
+
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
   /* In this case you can use width, height, font-size, color, border and border-radius */
@@ -145,11 +161,21 @@ input {
 }
 
 .container {
+  display: grid;
+  justify-content: center;
+  
+
+  
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
 }
 
 .row {
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 1px;
+  grid-row-gap: 10px;
+
+  
   /* The row of the grid has 3 columns which should be the same width and roughly a third of the available space */
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
@@ -157,11 +183,15 @@ input {
 }
 
 .section-title {
+  display: flex;
+  justify-content: center;
+
   /* The <div> with class section-title contains an <h3> child which we want to center */
   /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
 }
 
 .single-destination {
+  overflow: hidden;
   /* Use the margin property to make some space between the destinations */
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
@@ -169,36 +199,65 @@ input {
 }
 
 img {
+  max-width: 100%;
   /* Set the max-width property to 100% */
 }
 
 /* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
 
 .testimonial-area {
-  /* Write your code here */
+  background-color: rgb(48, 49, 71);
+  padding: 4rem;
 }
 
 .single-testmonial{
+  background-color: white;
+  padding: 1rem;
+  width: 15rem;
+  height: 20rem;
+  gap: 1rem;
+  display: grid;
+  justify-content: center;
+  border-radius: 5px;
+
   /* Write your code here */
 }
 
+.author-thumb{
+  display: grid;
+  justify-content: center;
+}
+
 .footer {
+  background-color: rgb(13, 13, 79);
+  color: white;
+  padding: 2rem;
   /* Write your code here */
 }
 
 .footer-widget p {
+  text-decoration: none;
+  color: white;
+  display: grid;
+ 
+  /* justify-content: ; */
   /* Write your code here */
 }
 
 .footer-widget a:hover {
+  text-decoration: underline;
    /* Write your code here */
 }
 
 .footer-widget ul li {
+  color: white;
+  padding: 0.5rem;
   /* Write your code here */
 }
 
 .footer-widget a {
+  /* text-decoration: none; */
+  color: white;
    /* Write your code here */
 }
 
